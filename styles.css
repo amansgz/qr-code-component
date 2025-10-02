@@ -1,0 +1,107 @@
+:root {
+  /* Colors */
+  --color-blue: hsl(217, 93%, 48%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-slate-300: hsl(212, 45%, 89%);
+  --color-slate-500: hsl(216, 15%, 48%);
+  --color-slate-900: hsl(218, 44%, 22%);
+
+  /* Fonts */
+  --ff-base: "Outfit", sans-serif;
+  --fs-sm: 13px;
+  --fs-md: 15px;
+  --fs-lg: 22px;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Spacing */
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-500: 40px;
+
+  /* Border Radius */
+  --border-radius-sm: 10px;
+  --border-radius-md: 20px;
+
+  /* Shadows */
+  --shadow-subtle: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  font-family: var(--ff-base);
+  font-size: 15px;
+  background-color: var(--color-slate-300);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+
+  padding: var(--spacing-200);
+}
+/* QR code component */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+
+  width: 320px;
+  padding: var(--spacing-200);
+  padding-bottom: var(--spacing-500);
+
+  text-align: center;
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-subtle);
+}
+.card-img {
+  display: block;
+  max-width: 100%;
+  border-radius: var(--border-radius-sm);
+}
+.card-title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-slate-900);
+  line-height: 1.2;
+}
+.card-text {
+  font-size: var(--fs-md);
+  color: var(--color-slate-500);
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  padding: 0 var(--spacing-200);
+}
+
+/* Footer with attribution */
+.footer {
+  padding: var(--spacing-200);
+  text-align: center;
+}
+.attribution {
+  font-size: var(--fs-sm);
+  color: var(--color-slate-900);
+}
+.attribution-link {
+  text-decoration: none;
+  color: var(--color-slate-900);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.attribution-link:hover,
+.attribution-link:focus {
+  color: var(--color-blue);
+}
