@@ -29,7 +29,7 @@ Part of the [Responsive Learning Path](https://www.frontendmentor.io/learning-pa
 
 ## 🔗 Live Preview
 
-[![Live Preview](https://img.shields.io/badge/Demo-Live-00BCD4?style=for-the-badge)]()
+[![Live Preview](https://img.shields.io/badge/Demo-Live-00BCD4?style=for-the-badge)](https://amansgz.github.io/qr-code-component)
 
 ## 📚 What I Learned
 
