@@ -8,17 +8,17 @@
 
   /* Fonts */
   --ff-base: "Outfit", sans-serif;
-  --fs-sm: 13px;
-  --fs-md: 15px;
-  --fs-lg: 22px;
+  --fs-sm: 0.867rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.47rem;
 
   --fw-regular: 400;
   --fw-bold: 700;
 
   /* Spacing */
-  --spacing-200: 16px;
-  --spacing-300: 24px;
-  --spacing-500: 40px;
+  --spacing-200: 1.07rem;
+  --spacing-300: 1.6rem;
+  --spacing-500: 2.66rem;
 
   /* Border Radius */
   --border-radius-sm: 10px;
@@ -26,6 +26,8 @@
 
   /* Shadows */
   --shadow-subtle: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  --transition-time: 0.2s;
 }
 
 *,
@@ -35,13 +37,15 @@
   margin: 0;
   padding: 0;
 }
+html {
+  font-size: 15px;
+}
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 
   font-family: var(--ff-base);
-  font-size: 15px;
   background-color: var(--color-slate-300);
 }
 main {
@@ -58,7 +62,7 @@ main {
   flex-direction: column;
   gap: var(--spacing-300);
 
-  width: 320px;
+  max-width: min(320px, 90vw);
   padding: var(--spacing-200);
   padding-bottom: var(--spacing-500);
 
@@ -75,14 +79,14 @@ main {
 .card-title {
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
-  color: var(--color-slate-900);
   line-height: 1.2;
+  color: var(--color-slate-900);
 }
 .card-text {
   font-size: var(--fs-md);
-  color: var(--color-slate-500);
   line-height: 1.4;
   letter-spacing: 0.2px;
+  color: var(--color-slate-500);
   padding: 0 var(--spacing-200);
 }
 
@@ -99,9 +103,17 @@ main {
   text-decoration: none;
   color: var(--color-slate-900);
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color var(--transition-time) ease;
 }
 .attribution-link:hover,
 .attribution-link:focus {
   color: var(--color-blue);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-time: 0.01ms;
+  }
+  a {
+    transition: none;
+  }
 }
