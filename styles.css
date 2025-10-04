@@ -126,7 +126,7 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  :root {
+  .attribution-link {
     transition-duration: 0.01ms;
   }
 }
